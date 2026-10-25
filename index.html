@@ -1,0 +1,509 @@
+<!doctype html>
+<html lang="da">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Ly – søg ly, når det stormer</title>
+<meta name="description" content="Ly hjælper dig med at forstå, hvordan din cyklus påvirker dit humør, din energi og din krop – med redskaber til de svære dage og en enkel måde at dele det med dine nære.">
+<!-- Kladde: skjult for søgemaskiner, indtil appen er i App Store. Fjern linjen ved lancering. -->
+<meta name="robots" content="noindex, nofollow">
+<meta name="theme-color" content="#F4F2EC">
+<link rel="icon" href="favicon.svg" type="image/svg+xml">
+<meta property="og:title" content="Ly – søg ly, når det stormer">
+<meta property="og:description" content="Ly hjælper dig med at forstå, hvordan din cyklus påvirker dit humør, din energi og din krop – med redskaber til de svære dage og en enkel måde at dele det med dine nære.">
+<meta property="og:locale" content="da_DK">
+<link rel="preconnect" href="https://fonts.googleapis.com"><link rel="preconnect" href="https://fonts.gstatic.com" crossorigin><link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Bagel+Fat+One&amp;family=Lora:wght@500;600&amp;family=Nunito+Sans:wght@400;600;700;800&amp;display=swap">
+<style>
+body{margin:0;background:#F4F2EC}
+a{color:#1F3FB0}a:hover{color:#16307F}
+a:focus-visible,summary:focus-visible{outline:3px solid #1F3FB0;outline-offset:3px;border-radius:6px}
+.site-nav a{display:inline-flex;align-items:center;min-height:44px}
+@media (max-width: 640px){.hdr-cta{display:none !important}.site-nav{gap:0 16px !important;font-size:15px !important}}
+@keyframes lyBreathe { 0%, 100% { transform: scale(1) } 50% { transform: scale(1.08) } }
+@keyframes lyGlow { 0%, 100% { opacity: 0.15 } 50% { opacity: 0.45 } }
+@keyframes lyFloat { 0%, 100% { transform: translateY(0) } 50% { transform: translateY(-8px) } }
+@keyframes lyAppear { 0% { opacity: 0; transform: translateY(8px) } 10% { opacity: 1; transform: none } 88% { opacity: 1; transform: none } 100% { opacity: 0 } }
+@keyframes lyFill { 0%, 8% { opacity: 0.2 } 25%, 85% { opacity: 1 } 100% { opacity: 0.2 } }
+@keyframes lyPulse { 0%, 100% { box-shadow: 0 0 0 3px #FFFFFF, 0 0 0 5px #1F3FB0 } 50% { box-shadow: 0 0 0 3px #FFFFFF, 0 0 0 9px rgba(31,63,176,0.35) } }
+@keyframes lyStep1 { 0% { opacity: 0; transform: translateY(8px) } 6% { opacity: 1; transform: none } 84% { opacity: 1; transform: none } 94%, 100% { opacity: 0; transform: none } }
+@keyframes lyStep2 { 0%, 18% { opacity: 0; transform: translateY(8px) } 24% { opacity: 1; transform: none } 84% { opacity: 1; transform: none } 94%, 100% { opacity: 0; transform: none } }
+@keyframes lyStep3 { 0%, 36% { opacity: 0; transform: translateY(8px) } 42% { opacity: 1; transform: none } 84% { opacity: 1; transform: none } 94%, 100% { opacity: 0; transform: none } }
+@keyframes lyScreenA { 0%, 30% { transform: translateX(0) } 34% { transform: translateX(-100%) } 34.1%, 96% { transform: translateX(100%) } 100% { transform: translateX(0) } }
+@keyframes lyScreenB { 0%, 30% { transform: translateX(100%) } 34%, 63% { transform: translateX(0) } 67% { transform: translateX(-100%) } 67.1%, 100% { transform: translateX(100%) } }
+@keyframes lyScreenC { 0%, 63% { transform: translateX(100%) } 67%, 96% { transform: translateX(0) } 100% { transform: translateX(-100%) } }
+@media (prefers-reduced-motion: reduce) { * { animation: none !important } }
+</style>
+</head>
+<body>
+<div style="background: #F4F2EC; color: #1C1F2E; font-family: 'Nunito Sans', sans-serif; font-size: 17px; line-height: 1.55">
+
+  <!-- Top -->
+  <header style="max-width: 1120px; margin: 0 auto; padding: 22px 24px; display: flex; flex-wrap: wrap; align-items: center; gap: 12px 28px">
+    <a href="index.html" aria-label="Ly – til forsiden" style="display: inline-flex; align-items: center; min-height: 44px; text-decoration: none"><svg width="52" height="39" viewBox="0 0 80 60" aria-hidden="true"><path fill="#1F3FB0" d="M0 54 C0 20 18 0 40 0 C62 0 80 20 80 54 C80 58 78 60 74 60 L52 60 L52 50 A12 12 0 0 0 28 50 L28 60 L6 60 C2 60 0 58 0 54 Z"></path></svg></a>
+    <nav class="site-nav" aria-label="Menu" style="display: flex; flex-wrap: wrap; gap: 6px 22px; font-size: 16px; font-weight: 700; flex: 1">
+      <a href="#funktioner" style="text-decoration: none">Det kan Ly</a>
+      <a href="#naere" style="text-decoration: none">Dine nære</a>
+      <a href="#privatliv" style="text-decoration: none">Privatliv</a>
+      <a href="#plus" style="text-decoration: none">Ly Plus</a>
+      <a href="support.html" style="text-decoration: none">Support</a>
+    </nav>
+    <a class="hdr-cta" href="#" style="display: inline-flex; align-items: center; gap: 8px; min-height: 44px; padding: 0 18px; border-radius: 22px; background: #1C1F2E; color: #FFFFFF; font-size: 15px; font-weight: 700; text-decoration: none">
+      <svg width="16" height="18" viewBox="0 0 17 20" aria-hidden="true"><path fill="#FFFFFF" d="M14.1 10.6c0-2.6 2.1-3.8 2.2-3.9-1.2-1.8-3.1-2-3.7-2-1.6-.2-3.1.9-3.9.9-.8 0-2-.9-3.4-.9C3.6 4.8 2 5.8 1.1 7.4c-1.8 3.2-.5 7.9 1.3 10.5.9 1.3 1.9 2.7 3.2 2.6 1.3-.1 1.8-.8 3.3-.8 1.6 0 2 .8 3.4.8 1.4 0 2.3-1.3 3.1-2.6 1-1.5 1.4-2.9 1.4-3-.1 0-2.7-1-2.7-4.3zM11.6 3c.7-.9 1.2-2 1-3.2-1 0-2.3.7-3 1.6-.7.8-1.2 2-1.1 3.1 1.2.1 2.4-.6 3.1-1.5z"></path></svg>
+      Hent i App Store</a>
+  </header>
+
+  <!-- Hero -->
+  <section style="max-width: 1120px; margin: 0 auto; padding: 40px 24px 72px; display: flex; flex-wrap: wrap; align-items: center; gap: 48px">
+    <div style="flex: 999 1 460px; min-width: 0; display: flex; flex-direction: column; gap: 22px">
+      <h1 style="margin: 0; font-family: 'Bagel Fat One', sans-serif; font-size: clamp(40px, 9vw, 60px); font-weight: 400; line-height: 1.08; color: #1F3FB0; text-wrap: balance">Søg Ly, når det stormer</h1>
+      <p style="margin: 0; font-size: 21px; max-width: 30em; color: #1C1F2E; font-weight: 600">Forstå dig selv. Find ro på de svære dage. Del det med dem, der står dig nær.</p>
+      <p style="margin: 0; font-size: 18px; max-width: 34em; color: #3A4256">Ly følger dit humør, din energi og din krop gennem cyklussen – så du kan se, hvad der går igen, møde uvejret med de rette redskaber og lade dine nære være med.</p>
+      <div style="display: flex; flex-wrap: wrap; gap: 12px; align-items: center">
+        <a href="#" style="display: inline-flex; align-items: center; gap: 10px; min-height: 52px; padding: 0 24px; border-radius: 26px; background: #1F3FB0; color: #FFFFFF; font-size: 17px; font-weight: 700; text-decoration: none">Hent Ly i App Store</a>
+        <a href="#funktioner" style="display: inline-flex; align-items: center; min-height: 52px; padding: 0 22px; border-radius: 26px; border: 1.5px solid #1F3FB0; color: #1F3FB0; font-size: 17px; font-weight: 700; text-decoration: none">Se, hvad Ly kan</a>
+      </div>
+      <p style="margin: 0; font-size: 14px; color: #5B6B85">Gratis at hente · Til iPhone · Dine data bliver på din telefon</p>
+    </div>
+
+    <!-- Telefon -->
+    <div style="flex: 1 1 300px; display: flex; justify-content: center">
+      <div role="img" aria-label="Ly på en iPhone, der skifter mellem I dag, tjek-ind og Kalender" style="position: relative; width: 300px; height: 600px; box-sizing: border-box; border-radius: 46px; background: #F4F2EC; border: 10px solid #1C1F2E; overflow: hidden; box-shadow: 0 24px 60px rgba(28,31,46,0.18)">
+        <!-- Skærm 1 · I dag -->
+        <div style="position: absolute; inset: 0; padding: 34px 14px 14px; display: flex; flex-direction: column; gap: 12px; background: #F4F2EC; transform: translateX(0); animation: lyScreenA 15s ease-in-out infinite">
+        <span style="font-family: Lora, serif; font-size: 22px; font-weight: 600">Goddag, Sara</span>
+        <div style="background: #FBF4F8; border-radius: 18px; padding: 14px; display: flex; flex-direction: column; gap: 10px">
+          <span style="display: flex; justify-content: space-between; align-items: center">
+            <span style="font-family: Lora, serif; font-size: 26px; font-weight: 600">Dag 24 <span style="font-family: 'Nunito Sans', sans-serif; font-size: 13px; color: #5B6B85; font-weight: 600">af 28</span></span>
+            <span style="font-size: 11px; font-weight: 800; padding: 4px 9px; border-radius: 12px; background: #E4A6C6">Sen lutealfase</span>
+          </span>
+          <span style="display: grid; grid-template-columns: repeat(28, minmax(0, 1fr)); gap: 2px">
+            <span style="height: 10px; border-radius: 2px; background: #1F3FB0"></span><span style="height: 10px; border-radius: 2px; background: #1F3FB0"></span><span style="height: 10px; border-radius: 2px; background: #1F3FB0"></span><span style="height: 10px; border-radius: 2px; background: #1F3FB0"></span><span style="height: 10px; border-radius: 2px; background: #1F3FB0"></span><span style="height: 10px; border-radius: 2px; background: #A8B540"></span><span style="height: 10px; border-radius: 2px; background: #A8B540"></span><span style="height: 10px; border-radius: 2px; background: #A8B540"></span><span style="height: 10px; border-radius: 2px; background: #A8B540"></span><span style="height: 10px; border-radius: 2px; background: #A8B540"></span><span style="height: 10px; border-radius: 2px; background: #A8B540"></span><span style="height: 10px; border-radius: 2px; background: #EEF28A"></span><span style="height: 10px; border-radius: 2px; background: #EEF28A"></span><span style="height: 10px; border-radius: 2px; background: #EEF28A"></span><span style="height: 10px; border-radius: 2px; background: #C3CEF2"></span><span style="height: 10px; border-radius: 2px; background: #C3CEF2"></span><span style="height: 10px; border-radius: 2px; background: #C3CEF2"></span><span style="height: 10px; border-radius: 2px; background: #C3CEF2"></span><span style="height: 10px; border-radius: 2px; background: #C3CEF2"></span><span style="height: 10px; border-radius: 2px; background: #C3CEF2"></span><span style="height: 10px; border-radius: 2px; background: #C3CEF2"></span><span style="height: 10px; border-radius: 2px; background: #C3CEF2"></span><span style="height: 10px; border-radius: 2px; background: #E4A6C6"></span><span style="height: 10px; border-radius: 2px; background: #E4A6C6; box-shadow: 0 0 0 1.5px #FFFFFF, 0 0 0 3px #1C1F2E"></span><span style="height: 10px; border-radius: 2px; background: #E4A6C6; opacity: 0.5"></span><span style="height: 10px; border-radius: 2px; background: #E4A6C6; opacity: 0.5"></span><span style="height: 10px; border-radius: 2px; background: #E4A6C6; opacity: 0.5"></span><span style="height: 10px; border-radius: 2px; background: #E4A6C6; opacity: 0.5"></span>
+          </span>
+          <span style="font-size: 12px; line-height: 1.4; background: #F4F2EC; border-radius: 10px; padding: 8px 10px">I disse dage plejer du at melde <b>træthed</b> og <b>uro</b>.</span>
+        </div>
+        <div style="background: #FFFFFF; border-radius: 18px; padding: 14px; display: flex; flex-direction: column; gap: 10px">
+          <span style="font-family: Lora, serif; font-size: 16px; font-weight: 600">Dagens tjek-ind</span>
+          <span style="display: flex; align-items: center; justify-content: center; min-height: 40px; border-radius: 20px; background: #1F3FB0; color: #FFFFFF; font-size: 14px; font-weight: 700">Tjek ind med dig selv</span>
+        </div>
+        <div style="background: #FFFFFF; border-radius: 18px; padding: 14px; display: flex; flex-direction: column; gap: 8px">
+          <span style="font-family: Lora, serif; font-size: 16px; font-weight: 600">Dig og Jonas</span>
+          <span style="align-self: flex-end; font-size: 12px; background: #E6EAF8; border-radius: 12px 12px 4px 12px; padding: 7px 10px">Jeg har en svær dag</span>
+          <span style="align-self: flex-start; font-size: 12px; background: #F7E3EF; border-radius: 12px 12px 12px 4px; padding: 7px 10px">Jeg klarer aftensmaden</span>
+        </div>
+      </div>
+
+        <!-- Skærm 2 · Tjek ind -->
+        <div style="position: absolute; inset: 0; padding: 34px 14px 14px; display: flex; flex-direction: column; gap: 12px; background: #F4F2EC; transform: translateX(100%); animation: lyScreenB 15s ease-in-out infinite">
+          <span style="font-family: Lora, serif; font-size: 22px; font-weight: 600">Tjek ind</span>
+          <div style="background: #FFFFFF; border-radius: 18px; padding: 14px; display: flex; flex-direction: column; gap: 10px">
+            <span style="font-size: 11px; font-weight: 800; letter-spacing: 0.6px; text-transform: uppercase; color: #5B6B85">Humør</span>
+            <div style="display: flex; justify-content: space-between">
+              <span style="width: 36px; height: 36px; border-radius: 18px; background: #C3CEF2; display: flex; align-items: center; justify-content: center"><svg width="20" height="17" viewBox="0 0 24 20" aria-hidden="true"><path d="M6 13 a5 5 0 0 1 .5-10 a7 7 0 0 1 12.5 2 a4 4 0 0 1 -.5 8 Z" fill="#1C1F2E"></path><path d="M9 15 l-2 4 M13 15 l-2 4 M17 15 l-2 4" stroke="#1C1F2E" stroke-width="1.6" stroke-linecap="round"></path></svg></span>
+              <span style="width: 36px; height: 36px; border-radius: 18px; background: #E4A6C6; display: flex; align-items: center; justify-content: center"><svg width="20" height="15" viewBox="0 0 24 18" aria-hidden="true"><path d="M6 15 a5 5 0 0 1 .5-10 a7 7 0 0 1 12.5 2 a4 4 0 0 1 -.5 8 Z" fill="#1C1F2E"></path></svg></span>
+              <span style="width: 36px; height: 36px; border-radius: 18px; background: #E8DFCE; display: flex; align-items: center; justify-content: center; box-shadow: 0 0 0 3px #FFFFFF, 0 0 0 5px #1F3FB0; animation: lyPulse 2.6s ease-in-out infinite"><svg width="22" height="19" viewBox="0 0 26 22" aria-hidden="true"><circle cx="17" cy="7" r="4.5" fill="#1C1F2E"></circle><path d="M5 19 a5 5 0 0 1 .5-10 a7 7 0 0 1 12.5 2 a4 4 0 0 1 -.5 8 Z" fill="#1C1F2E"></path></svg></span>
+              <span style="width: 36px; height: 36px; border-radius: 18px; background: #EEF28A; display: flex; align-items: center; justify-content: center"><svg width="18" height="18" viewBox="0 0 22 22" aria-hidden="true"><circle cx="11" cy="11" r="5" fill="#1C1F2E"></circle></svg></span>
+              <span style="width: 36px; height: 36px; border-radius: 18px; background: #A8B540; display: flex; align-items: center; justify-content: center"><svg width="20" height="20" viewBox="0 0 24 24" aria-hidden="true"><circle cx="12" cy="12" r="5" fill="#1C1F2E"></circle><path d="M12 1.5v3 M12 19.5v3 M1.5 12h3 M19.5 12h3 M4.5 4.5l2 2 M17.5 17.5l2 2 M4.5 19.5l2-2 M17.5 6.5l2-2" stroke="#1C1F2E" stroke-width="1.8" stroke-linecap="round"></path></svg></span>
+            </div>
+          </div>
+          <div style="background: #FFFFFF; border-radius: 18px; padding: 14px; display: flex; flex-direction: column; gap: 10px">
+            <span style="font-size: 11px; font-weight: 800; letter-spacing: 0.6px; text-transform: uppercase; color: #5B6B85">Energiniveau</span>
+            <div style="display: flex; gap: 6px">
+              <span style="flex: 1; height: 26px; border-radius: 8px; background: #EEF28A"></span><span style="flex: 1; height: 26px; border-radius: 8px; background: #EEF28A; box-shadow: 0 0 0 2px #FFFFFF, 0 0 0 3.5px #1F3FB0"></span><span style="flex: 1; height: 26px; border-radius: 8px; background: #F1EEE7"></span><span style="flex: 1; height: 26px; border-radius: 8px; background: #F1EEE7"></span>
+            </div>
+          </div>
+          <div style="background: #FFFFFF; border-radius: 18px; padding: 14px; display: flex; flex-direction: column; gap: 10px">
+            <span style="font-size: 11px; font-weight: 800; letter-spacing: 0.6px; text-transform: uppercase; color: #5B6B85">Det, du mærker</span>
+            <div style="display: flex; flex-wrap: wrap; gap: 6px">
+              <span style="display: flex; align-items: center; gap: 5px; padding: 6px 10px; border-radius: 14px; background: #F7E3EF; font-size: 12px; font-weight: 700; animation: lyAppear 5s ease-out 0.3s infinite both">Træthed <span style="display: flex; gap: 2px"><span style="width: 5px; height: 5px; border-radius: 3px; background: #9A3F72"></span><span style="width: 5px; height: 5px; border-radius: 3px; background: #9A3F72"></span><span style="width: 5px; height: 5px; border-radius: 3px; background: #E4A6C6"></span></span></span>
+              <span style="display: flex; align-items: center; gap: 5px; padding: 6px 10px; border-radius: 14px; background: #F7E3EF; font-size: 12px; font-weight: 700; animation: lyAppear 5s ease-out 0.9s infinite both">Uro <span style="display: flex; gap: 2px"><span style="width: 5px; height: 5px; border-radius: 3px; background: #9A3F72"></span><span style="width: 5px; height: 5px; border-radius: 3px; background: #E4A6C6"></span><span style="width: 5px; height: 5px; border-radius: 3px; background: #E4A6C6"></span></span></span>
+              <span style="padding: 6px 10px; border-radius: 14px; border: 1.5px solid #E8DFCE; font-size: 12px">Hovedpine</span>
+              <span style="padding: 6px 10px; border-radius: 14px; border: 1.5px solid #E8DFCE; font-size: 12px">Mavekramper</span>
+            </div>
+          </div>
+        </div>
+
+        <!-- Skærm 3 · Kalender -->
+        <div style="position: absolute; inset: 0; padding: 34px 14px 14px; display: flex; flex-direction: column; gap: 12px; background: #F4F2EC; transform: translateX(100%); animation: lyScreenC 15s ease-in-out infinite">
+          <span style="font-family: Lora, serif; font-size: 22px; font-weight: 600">Kalender</span>
+          <div style="background: #FFFFFF; border-radius: 18px; padding: 12px; display: flex; flex-direction: column; gap: 8px">
+            <span style="font-family: Lora, serif; font-size: 15px; font-weight: 600; text-align: center">oktober 2026</span>
+            <div style="display: grid; grid-template-columns: repeat(7, minmax(0, 1fr)); gap: 3px">
+              
+                <span style="height: 34px"><span style="display: none"></span><span style="display: none"></span><span style="display: none"></span></span>
+              
+                <span style="height: 34px"><span style="display: none"></span><span style="display: none"></span><span style="display: none"></span></span>
+              
+                <span style="height: 34px"><span style="display: none"></span><span style="display: none"></span><span style="display: none"></span></span>
+              
+                <span style="position: relative; height: 34px; border-radius: 7px; display: flex; flex-direction: column; align-items: center; justify-content: center; gap: 2px; background: rgba(168,181,64,0.16)"><span style="font-size: 11px; font-weight: 600; color: #1C1F2E">1</span><span style="display: none"></span><span style="display: none"></span></span>
+              
+                <span style="position: relative; height: 34px; border-radius: 7px; display: flex; flex-direction: column; align-items: center; justify-content: center; gap: 2px; background: rgba(168,181,64,0.16)"><span style="font-size: 11px; font-weight: 600; color: #1C1F2E">2</span><span style="display: none"></span><span style="display: none"></span></span>
+              
+                <span style="position: relative; height: 34px; border-radius: 7px; display: flex; flex-direction: column; align-items: center; justify-content: center; gap: 2px; background: rgba(168,181,64,0.16)"><span style="font-size: 11px; font-weight: 600; color: #1C1F2E">3</span><span style="display: none"></span><span style="display: none"></span></span>
+              
+                <span style="position: relative; height: 34px; border-radius: 7px; display: flex; flex-direction: column; align-items: center; justify-content: center; gap: 2px; background: rgba(168,181,64,0.16)"><span style="font-size: 11px; font-weight: 600; color: #1C1F2E">4</span><span style="display: none"></span><span style="display: none"></span></span>
+              
+                <span style="position: relative; height: 34px; border-radius: 7px; display: flex; flex-direction: column; align-items: center; justify-content: center; gap: 2px; background: rgba(168,181,64,0.16)"><span style="font-size: 11px; font-weight: 600; color: #1C1F2E">5</span><span style="display: none"></span><span style="display: none"></span></span>
+              
+                <span style="position: relative; height: 34px; border-radius: 7px; display: flex; flex-direction: column; align-items: center; justify-content: center; gap: 2px; background: rgba(238,242,138,0.5)"><span style="font-size: 11px; font-weight: 600; color: #1C1F2E">6</span><span style="display: none"></span><span style="display: none"></span></span>
+              
+                <span style="position: relative; height: 34px; border-radius: 7px; display: flex; flex-direction: column; align-items: center; justify-content: center; gap: 2px; background: rgba(238,242,138,0.5)"><span style="font-size: 11px; font-weight: 600; color: #1C1F2E">7</span><span style="display: none"></span><span style="display: none"></span></span>
+              
+                <span style="position: relative; height: 34px; border-radius: 7px; display: flex; flex-direction: column; align-items: center; justify-content: center; gap: 2px; background: rgba(238,242,138,0.5)"><span style="font-size: 11px; font-weight: 600; color: #1C1F2E">8</span><span style="display: none"></span><span style="display: none"></span></span>
+              
+                <span style="position: relative; height: 34px; border-radius: 7px; display: flex; flex-direction: column; align-items: center; justify-content: center; gap: 2px; background: rgba(195,206,242,0.45)"><span style="font-size: 11px; font-weight: 600; color: #1C1F2E">9</span><span style="display: none"></span><span style="display: none"></span></span>
+              
+                <span style="position: relative; height: 34px; border-radius: 7px; display: flex; flex-direction: column; align-items: center; justify-content: center; gap: 2px; background: rgba(195,206,242,0.45)"><span style="font-size: 11px; font-weight: 600; color: #1C1F2E">10</span><span style="display: none"></span><span style="display: none"></span></span>
+              
+                <span style="position: relative; height: 34px; border-radius: 7px; display: flex; flex-direction: column; align-items: center; justify-content: center; gap: 2px; background: rgba(195,206,242,0.45)"><span style="font-size: 11px; font-weight: 600; color: #1C1F2E">11</span><span style="display: none"></span><span style="display: none"></span></span>
+              
+                <span style="position: relative; height: 34px; border-radius: 7px; display: flex; flex-direction: column; align-items: center; justify-content: center; gap: 2px; background: rgba(195,206,242,0.45)"><span style="font-size: 11px; font-weight: 600; color: #1C1F2E">12</span><span style="display: none"></span><span style="display: none"></span></span>
+              
+                <span style="position: relative; height: 34px; border-radius: 7px; display: flex; flex-direction: column; align-items: center; justify-content: center; gap: 2px; background: rgba(195,206,242,0.45)"><span style="font-size: 11px; font-weight: 600; color: #1C1F2E">13</span><span style="display: none"></span><span style="display: none"></span></span>
+              
+                <span style="position: relative; height: 34px; border-radius: 7px; display: flex; flex-direction: column; align-items: center; justify-content: center; gap: 2px; background: rgba(195,206,242,0.45)"><span style="font-size: 11px; font-weight: 600; color: #1C1F2E">14</span><span style="display: none"></span><span style="position: absolute; bottom: 3px; left: 50%; margin-left: -6px; width: 12px; height: 2.5px; border-radius: 2px; background: #1F3FB0; animation: lyAppear 6s ease-out 1.6s infinite both"></span></span>
+              
+                <span style="position: relative; height: 34px; border-radius: 7px; display: flex; flex-direction: column; align-items: center; justify-content: center; gap: 2px; background: rgba(195,206,242,0.45)"><span style="font-size: 11px; font-weight: 600; color: #1C1F2E">15</span><span style="display: none"></span><span style="display: none"></span></span>
+              
+                <span style="position: relative; height: 34px; border-radius: 7px; display: flex; flex-direction: column; align-items: center; justify-content: center; gap: 2px; background: rgba(195,206,242,0.45)"><span style="font-size: 11px; font-weight: 600; color: #1C1F2E">16</span><span style="display: none"></span><span style="display: none"></span></span>
+              
+                <span style="position: relative; height: 34px; border-radius: 7px; display: flex; flex-direction: column; align-items: center; justify-content: center; gap: 2px; background: rgba(228,166,198,0.35)"><span style="font-size: 11px; font-weight: 600; color: #1C1F2E">17</span><span style="width: 8px; height: 4px; border-radius: 2px; background: #9A3F72; animation: lyAppear 6s ease-out 0.40s infinite both"></span><span style="display: none"></span></span>
+              
+                <span style="position: relative; height: 34px; border-radius: 7px; display: flex; flex-direction: column; align-items: center; justify-content: center; gap: 2px; background: rgba(228,166,198,0.35)"><span style="font-size: 11px; font-weight: 600; color: #1C1F2E">18</span><span style="width: 8px; height: 4px; border-radius: 2px; background: #9A3F72; animation: lyAppear 6s ease-out 0.55s infinite both"></span><span style="display: none"></span></span>
+              
+                <span style="position: relative; height: 34px; border-radius: 7px; display: flex; flex-direction: column; align-items: center; justify-content: center; gap: 2px; background: rgba(228,166,198,0.35)"><span style="font-size: 11px; font-weight: 600; color: #1C1F2E">19</span><span style="width: 8px; height: 4px; border-radius: 2px; background: #9A3F72; animation: lyAppear 6s ease-out 0.70s infinite both"></span><span style="display: none"></span></span>
+              
+                <span style="position: relative; height: 34px; border-radius: 7px; display: flex; flex-direction: column; align-items: center; justify-content: center; gap: 2px; background: rgba(228,166,198,0.35)"><span style="font-size: 11px; font-weight: 600; color: #1C1F2E">20</span><span style="width: 8px; height: 4px; border-radius: 2px; background: #9A3F72; animation: lyAppear 6s ease-out 0.85s infinite both"></span><span style="position: absolute; bottom: 3px; left: 50%; margin-left: -6px; width: 12px; height: 2.5px; border-radius: 2px; background: #1F3FB0; animation: lyAppear 6s ease-out 2s infinite both"></span></span>
+              
+                <span style="position: relative; height: 34px; border-radius: 7px; display: flex; flex-direction: column; align-items: center; justify-content: center; gap: 2px; background: rgba(228,166,198,0.35)"><span style="font-size: 11px; font-weight: 600; color: #1C1F2E">21</span><span style="width: 8px; height: 4px; border-radius: 2px; background: #9A3F72; animation: lyAppear 6s ease-out 1.00s infinite both"></span><span style="display: none"></span></span>
+              
+                <span style="position: relative; height: 34px; border-radius: 7px; display: flex; flex-direction: column; align-items: center; justify-content: center; gap: 2px; background: rgba(228,166,198,0.35)"><span style="font-size: 11px; font-weight: 600; color: #1C1F2E">22</span><span style="width: 8px; height: 4px; border-radius: 2px; background: #9A3F72; animation: lyAppear 6s ease-out 1.15s infinite both"></span><span style="display: none"></span></span>
+              
+                <span style="position: relative; height: 34px; border-radius: 7px; display: flex; flex-direction: column; align-items: center; justify-content: center; gap: 2px; background: #1F3FB0"><span style="font-size: 11px; font-weight: 800; color: #FFFFFF">23</span><span style="display: none"></span><span style="display: none"></span></span>
+              
+                <span style="position: relative; height: 34px; border-radius: 7px; display: flex; flex-direction: column; align-items: center; justify-content: center; gap: 2px; background: #1F3FB0"><span style="font-size: 11px; font-weight: 800; color: #FFFFFF">24</span><span style="display: none"></span><span style="display: none"></span></span>
+              
+                <span style="position: relative; height: 34px; border-radius: 7px; display: flex; flex-direction: column; align-items: center; justify-content: center; gap: 2px; background: #1F3FB0"><span style="font-size: 11px; font-weight: 800; color: #FFFFFF">25</span><span style="display: none"></span><span style="display: none"></span></span>
+              
+                <span style="position: relative; height: 34px; border-radius: 7px; display: flex; flex-direction: column; align-items: center; justify-content: center; gap: 2px; background: #1F3FB0"><span style="font-size: 11px; font-weight: 800; color: #FFFFFF">26</span><span style="display: none"></span><span style="display: none"></span></span>
+              
+                <span style="position: relative; height: 34px; border-radius: 7px; display: flex; flex-direction: column; align-items: center; justify-content: center; gap: 2px; background: #1F3FB0"><span style="font-size: 11px; font-weight: 800; color: #FFFFFF">27</span><span style="display: none"></span><span style="display: none"></span></span>
+              
+                <span style="position: relative; height: 34px; border-radius: 7px; display: flex; flex-direction: column; align-items: center; justify-content: center; gap: 2px; background: rgba(168,181,64,0.16)"><span style="font-size: 11px; font-weight: 600; color: #1C1F2E">28</span><span style="display: none"></span><span style="display: none"></span></span>
+              
+                <span style="position: relative; height: 34px; border-radius: 7px; display: flex; flex-direction: column; align-items: center; justify-content: center; gap: 2px; background: rgba(168,181,64,0.16)"><span style="font-size: 11px; font-weight: 600; color: #1C1F2E">29</span><span style="display: none"></span><span style="position: absolute; bottom: 3px; left: 50%; margin-left: -6px; width: 12px; height: 2.5px; border-radius: 2px; background: #1F3FB0; animation: lyAppear 6s ease-out 2.4s infinite both"></span></span>
+              
+                <span style="position: relative; height: 34px; border-radius: 7px; display: flex; flex-direction: column; align-items: center; justify-content: center; gap: 2px; background: rgba(168,181,64,0.16)"><span style="font-size: 11px; font-weight: 600; color: #1C1F2E">30</span><span style="display: none"></span><span style="display: none"></span></span>
+              
+                <span style="position: relative; height: 34px; border-radius: 7px; display: flex; flex-direction: column; align-items: center; justify-content: center; gap: 2px; background: rgba(168,181,64,0.16)"><span style="font-size: 11px; font-weight: 600; color: #1C1F2E">31</span><span style="display: none"></span><span style="display: none"></span></span>
+              
+            </div>
+          </div>
+          <div style="background: #FFFFFF; border-radius: 18px; padding: 12px 14px; display: flex; flex-direction: column; gap: 6px">
+            <span style="font-family: Lora, serif; font-size: 14px; font-weight: 600">Det kan du regne med i oktober</span>
+            <span style="align-self: flex-start; font-size: 11px; font-weight: 800; padding: 3px 9px; border-radius: 10px; background: #E4A6C6">Sen lutealfase · 17.–22. okt.</span>
+            <span style="font-size: 11px; line-height: 1.4; background: #F4F2EC; border-radius: 8px; padding: 6px 8px; animation: lyAppear 5s ease-out 1s infinite both"><b>20. okt.</b> Fødselsdag hos mor</span>
+          </div>
+        </div>
+
+      </div>
+    </div>
+  </section>
+
+  <!-- Hvorfor Ly -->
+  <section id="hvorfor" style="padding: 0 24px 80px">
+    <div style="max-width: 1120px; margin: 0 auto; display: flex; flex-direction: column; gap: 32px">
+      
+      <div style="display: grid; grid-template-columns: repeat(auto-fit, minmax(280px, 1fr)); gap: 32px">
+        
+          <div style="border-top: 3px solid #1F3FB0; padding-top: 20px; display: flex; flex-direction: column; gap: 10px">
+            <h2 style="margin: 0; font-family: Lora, serif; font-size: 26px; font-weight: 600; line-height: 1.2">Overskuelig, når det er svært</h2>
+            <p style="margin: 0; font-size: 17px; color: #3A4256">På de svære dage skal en app ikke være endnu en opgave. Ét tryk for humør, ét for energi og et par stykker for det, du mærker. Mere skal der ikke til.</p>
+          </div>
+        
+          <div style="border-top: 3px solid #1F3FB0; padding-top: 20px; display: flex; flex-direction: column; gap: 10px">
+            <h2 style="margin: 0; font-family: Lora, serif; font-size: 26px; font-weight: 600; line-height: 1.2">Lærer dig at kende</h2>
+            <p style="margin: 0; font-size: 17px; color: #3A4256">Med tiden lærer Ly, hvilke symptomer – både fysiske og mentale – du oftest mærker i de forskellige faser. Så du kan forstå dem og planlægge din hverdag efter dem.</p>
+          </div>
+        
+          <div style="border-top: 3px solid #1F3FB0; padding-top: 20px; display: flex; flex-direction: column; gap: 10px">
+            <h2 style="margin: 0; font-family: Lora, serif; font-size: 26px; font-weight: 600; line-height: 1.2">Bygger bro til dine nære</h2>
+            <p style="margin: 0; font-size: 17px; color: #3A4256">Ly giver jer et fælles sprog. Dine nære lærer, hvad du går igennem, og hvornår du kan have brug for dem.</p>
+          </div>
+        
+      </div>
+    </div>
+  </section>
+
+  <!-- Det kan Ly -->
+  <section id="funktioner" style="background: #FFFFFF; padding: 80px 24px">
+    <div style="max-width: 1120px; margin: 0 auto; display: flex; flex-direction: column; gap: 40px">
+      <div style="max-width: 640px; display: flex; flex-direction: column; gap: 10px">
+        <span style="font-size: 13px; font-weight: 800; letter-spacing: 0.8px; text-transform: uppercase; color: #1F3FB0">Det kan Ly</span>
+        <h2 style="margin: 0; font-family: Lora, serif; font-size: clamp(30px, 3.6vw, 42px); font-weight: 600; line-height: 1.15">Følelser er som vejr</h2>
+        <p style="margin: 0; font-size: 18px; color: #3A4256">De skifter og kommer igen – ofte på de samme tidspunkter i din cyklus. Ly viser dig, hvornår de svære dage plejer at komme, så du kan forberede dig og planlægge efter det.</p>
+      </div>
+      <div style="display: grid; grid-template-columns: repeat(auto-fit, minmax(240px, 1fr)); gap: 20px">
+        <div style="background: #F4F2EC; border-radius: 20px; padding: 16px 16px 24px; display: flex; flex-direction: column; gap: 12px">
+            <div style="height: 170px; border-radius: 14px; background: #EFE8DA; display: flex; align-items: center; justify-content: center; overflow: hidden"><div style="flex: none; transform: scale(0.6)">
+              <div role="img" aria-label="En månedskalender med faser, pilledage og aftaler" style="width: 300px; background: #FFFFFF; border-radius: 20px; padding: 14px; display: flex; flex-direction: column; gap: 8px; box-shadow: 0 6px 18px rgba(28,31,46,0.08); box-sizing: border-box">
+                <span style="font-family: Lora, serif; font-size: 16px; font-weight: 600; padding: 0 4px">Oktober</span>
+                <div style="display: grid; grid-template-columns: repeat(7, minmax(0, 1fr)); gap: 4px">
+                  
+                    <span style="height: 34px"><span style="display: none"></span><span style="display: none"></span><span style="display: none"></span></span>
+                  
+                    <span style="height: 34px"><span style="display: none"></span><span style="display: none"></span><span style="display: none"></span></span>
+                  
+                    <span style="height: 34px"><span style="display: none"></span><span style="display: none"></span><span style="display: none"></span></span>
+                  
+                    <span style="position: relative; height: 34px; border-radius: 7px; display: flex; flex-direction: column; align-items: center; justify-content: center; gap: 2px; background: rgba(168,181,64,0.16)"><span style="font-size: 11px; font-weight: 600; color: #1C1F2E">1</span><span style="display: none"></span><span style="display: none"></span></span>
+                  
+                    <span style="position: relative; height: 34px; border-radius: 7px; display: flex; flex-direction: column; align-items: center; justify-content: center; gap: 2px; background: rgba(168,181,64,0.16)"><span style="font-size: 11px; font-weight: 600; color: #1C1F2E">2</span><span style="display: none"></span><span style="display: none"></span></span>
+                  
+                    <span style="position: relative; height: 34px; border-radius: 7px; display: flex; flex-direction: column; align-items: center; justify-content: center; gap: 2px; background: rgba(168,181,64,0.16)"><span style="font-size: 11px; font-weight: 600; color: #1C1F2E">3</span><span style="display: none"></span><span style="display: none"></span></span>
+                  
+                    <span style="position: relative; height: 34px; border-radius: 7px; display: flex; flex-direction: column; align-items: center; justify-content: center; gap: 2px; background: rgba(168,181,64,0.16)"><span style="font-size: 11px; font-weight: 600; color: #1C1F2E">4</span><span style="display: none"></span><span style="display: none"></span></span>
+                  
+                    <span style="position: relative; height: 34px; border-radius: 7px; display: flex; flex-direction: column; align-items: center; justify-content: center; gap: 2px; background: rgba(168,181,64,0.16)"><span style="font-size: 11px; font-weight: 600; color: #1C1F2E">5</span><span style="display: none"></span><span style="display: none"></span></span>
+                  
+                    <span style="position: relative; height: 34px; border-radius: 7px; display: flex; flex-direction: column; align-items: center; justify-content: center; gap: 2px; background: rgba(238,242,138,0.5)"><span style="font-size: 11px; font-weight: 600; color: #1C1F2E">6</span><span style="display: none"></span><span style="display: none"></span></span>
+                  
+                    <span style="position: relative; height: 34px; border-radius: 7px; display: flex; flex-direction: column; align-items: center; justify-content: center; gap: 2px; background: rgba(238,242,138,0.5)"><span style="font-size: 11px; font-weight: 600; color: #1C1F2E">7</span><span style="display: none"></span><span style="display: none"></span></span>
+                  
+                    <span style="position: relative; height: 34px; border-radius: 7px; display: flex; flex-direction: column; align-items: center; justify-content: center; gap: 2px; background: rgba(238,242,138,0.5)"><span style="font-size: 11px; font-weight: 600; color: #1C1F2E">8</span><span style="display: none"></span><span style="display: none"></span></span>
+                  
+                    <span style="position: relative; height: 34px; border-radius: 7px; display: flex; flex-direction: column; align-items: center; justify-content: center; gap: 2px; background: rgba(195,206,242,0.45)"><span style="font-size: 11px; font-weight: 600; color: #1C1F2E">9</span><span style="display: none"></span><span style="display: none"></span></span>
+                  
+                    <span style="position: relative; height: 34px; border-radius: 7px; display: flex; flex-direction: column; align-items: center; justify-content: center; gap: 2px; background: rgba(195,206,242,0.45)"><span style="font-size: 11px; font-weight: 600; color: #1C1F2E">10</span><span style="display: none"></span><span style="display: none"></span></span>
+                  
+                    <span style="position: relative; height: 34px; border-radius: 7px; display: flex; flex-direction: column; align-items: center; justify-content: center; gap: 2px; background: rgba(195,206,242,0.45)"><span style="font-size: 11px; font-weight: 600; color: #1C1F2E">11</span><span style="display: none"></span><span style="display: none"></span></span>
+                  
+                    <span style="position: relative; height: 34px; border-radius: 7px; display: flex; flex-direction: column; align-items: center; justify-content: center; gap: 2px; background: rgba(195,206,242,0.45)"><span style="font-size: 11px; font-weight: 600; color: #1C1F2E">12</span><span style="display: none"></span><span style="display: none"></span></span>
+                  
+                    <span style="position: relative; height: 34px; border-radius: 7px; display: flex; flex-direction: column; align-items: center; justify-content: center; gap: 2px; background: rgba(195,206,242,0.45)"><span style="font-size: 11px; font-weight: 600; color: #1C1F2E">13</span><span style="display: none"></span><span style="display: none"></span></span>
+                  
+                    <span style="position: relative; height: 34px; border-radius: 7px; display: flex; flex-direction: column; align-items: center; justify-content: center; gap: 2px; background: rgba(195,206,242,0.45)"><span style="font-size: 11px; font-weight: 600; color: #1C1F2E">14</span><span style="display: none"></span><span style="position: absolute; bottom: 3px; left: 50%; margin-left: -6px; width: 12px; height: 2.5px; border-radius: 2px; background: #1F3FB0; animation: lyAppear 6s ease-out 1.6s infinite both"></span></span>
+                  
+                    <span style="position: relative; height: 34px; border-radius: 7px; display: flex; flex-direction: column; align-items: center; justify-content: center; gap: 2px; background: rgba(195,206,242,0.45)"><span style="font-size: 11px; font-weight: 600; color: #1C1F2E">15</span><span style="display: none"></span><span style="display: none"></span></span>
+                  
+                    <span style="position: relative; height: 34px; border-radius: 7px; display: flex; flex-direction: column; align-items: center; justify-content: center; gap: 2px; background: rgba(195,206,242,0.45)"><span style="font-size: 11px; font-weight: 600; color: #1C1F2E">16</span><span style="display: none"></span><span style="display: none"></span></span>
+                  
+                    <span style="position: relative; height: 34px; border-radius: 7px; display: flex; flex-direction: column; align-items: center; justify-content: center; gap: 2px; background: rgba(228,166,198,0.35)"><span style="font-size: 11px; font-weight: 600; color: #1C1F2E">17</span><span style="width: 8px; height: 4px; border-radius: 2px; background: #9A3F72; animation: lyAppear 6s ease-out 0.40s infinite both"></span><span style="display: none"></span></span>
+                  
+                    <span style="position: relative; height: 34px; border-radius: 7px; display: flex; flex-direction: column; align-items: center; justify-content: center; gap: 2px; background: rgba(228,166,198,0.35)"><span style="font-size: 11px; font-weight: 600; color: #1C1F2E">18</span><span style="width: 8px; height: 4px; border-radius: 2px; background: #9A3F72; animation: lyAppear 6s ease-out 0.55s infinite both"></span><span style="display: none"></span></span>
+                  
+                    <span style="position: relative; height: 34px; border-radius: 7px; display: flex; flex-direction: column; align-items: center; justify-content: center; gap: 2px; background: rgba(228,166,198,0.35)"><span style="font-size: 11px; font-weight: 600; color: #1C1F2E">19</span><span style="width: 8px; height: 4px; border-radius: 2px; background: #9A3F72; animation: lyAppear 6s ease-out 0.70s infinite both"></span><span style="display: none"></span></span>
+                  
+                    <span style="position: relative; height: 34px; border-radius: 7px; display: flex; flex-direction: column; align-items: center; justify-content: center; gap: 2px; background: rgba(228,166,198,0.35)"><span style="font-size: 11px; font-weight: 600; color: #1C1F2E">20</span><span style="width: 8px; height: 4px; border-radius: 2px; background: #9A3F72; animation: lyAppear 6s ease-out 0.85s infinite both"></span><span style="position: absolute; bottom: 3px; left: 50%; margin-left: -6px; width: 12px; height: 2.5px; border-radius: 2px; background: #1F3FB0; animation: lyAppear 6s ease-out 2s infinite both"></span></span>
+                  
+                    <span style="position: relative; height: 34px; border-radius: 7px; display: flex; flex-direction: column; align-items: center; justify-content: center; gap: 2px; background: rgba(228,166,198,0.35)"><span style="font-size: 11px; font-weight: 600; color: #1C1F2E">21</span><span style="width: 8px; height: 4px; border-radius: 2px; background: #9A3F72; animation: lyAppear 6s ease-out 1.00s infinite both"></span><span style="display: none"></span></span>
+                  
+                    <span style="position: relative; height: 34px; border-radius: 7px; display: flex; flex-direction: column; align-items: center; justify-content: center; gap: 2px; background: rgba(228,166,198,0.35)"><span style="font-size: 11px; font-weight: 600; color: #1C1F2E">22</span><span style="width: 8px; height: 4px; border-radius: 2px; background: #9A3F72; animation: lyAppear 6s ease-out 1.15s infinite both"></span><span style="display: none"></span></span>
+                  
+                    <span style="position: relative; height: 34px; border-radius: 7px; display: flex; flex-direction: column; align-items: center; justify-content: center; gap: 2px; background: #1F3FB0"><span style="font-size: 11px; font-weight: 800; color: #FFFFFF">23</span><span style="display: none"></span><span style="display: none"></span></span>
+                  
+                    <span style="position: relative; height: 34px; border-radius: 7px; display: flex; flex-direction: column; align-items: center; justify-content: center; gap: 2px; background: #1F3FB0"><span style="font-size: 11px; font-weight: 800; color: #FFFFFF">24</span><span style="display: none"></span><span style="display: none"></span></span>
+                  
+                    <span style="position: relative; height: 34px; border-radius: 7px; display: flex; flex-direction: column; align-items: center; justify-content: center; gap: 2px; background: #1F3FB0"><span style="font-size: 11px; font-weight: 800; color: #FFFFFF">25</span><span style="display: none"></span><span style="display: none"></span></span>
+                  
+                    <span style="position: relative; height: 34px; border-radius: 7px; display: flex; flex-direction: column; align-items: center; justify-content: center; gap: 2px; background: #1F3FB0"><span style="font-size: 11px; font-weight: 800; color: #FFFFFF">26</span><span style="display: none"></span><span style="display: none"></span></span>
+                  
+                    <span style="position: relative; height: 34px; border-radius: 7px; display: flex; flex-direction: column; align-items: center; justify-content: center; gap: 2px; background: #1F3FB0"><span style="font-size: 11px; font-weight: 800; color: #FFFFFF">27</span><span style="display: none"></span><span style="display: none"></span></span>
+                  
+                    <span style="position: relative; height: 34px; border-radius: 7px; display: flex; flex-direction: column; align-items: center; justify-content: center; gap: 2px; background: rgba(168,181,64,0.16)"><span style="font-size: 11px; font-weight: 600; color: #1C1F2E">28</span><span style="display: none"></span><span style="display: none"></span></span>
+                  
+                    <span style="position: relative; height: 34px; border-radius: 7px; display: flex; flex-direction: column; align-items: center; justify-content: center; gap: 2px; background: rgba(168,181,64,0.16)"><span style="font-size: 11px; font-weight: 600; color: #1C1F2E">29</span><span style="display: none"></span><span style="position: absolute; bottom: 3px; left: 50%; margin-left: -6px; width: 12px; height: 2.5px; border-radius: 2px; background: #1F3FB0; animation: lyAppear 6s ease-out 2.4s infinite both"></span></span>
+                  
+                    <span style="position: relative; height: 34px; border-radius: 7px; display: flex; flex-direction: column; align-items: center; justify-content: center; gap: 2px; background: rgba(168,181,64,0.16)"><span style="font-size: 11px; font-weight: 600; color: #1C1F2E">30</span><span style="display: none"></span><span style="display: none"></span></span>
+                  
+                    <span style="position: relative; height: 34px; border-radius: 7px; display: flex; flex-direction: column; align-items: center; justify-content: center; gap: 2px; background: rgba(168,181,64,0.16)"><span style="font-size: 11px; font-weight: 600; color: #1C1F2E">31</span><span style="display: none"></span><span style="display: none"></span></span>
+                  
+                </div>
+              </div>
+            </div></div>
+            <h3 style="margin: 4px 8px 0; font-family: Lora, serif; font-size: 22px; font-weight: 600; line-height: 1.25">Planlæg med din cyklus</h3>
+            <p style="margin: 0 8px; font-size: 16px; color: #3A4256">Læg dine aftaler ind i Lys kalender, og se med det samme, hvilken fase du er i den dag. Så kan du lægge festen i en god uge – eller sætte ekstra ro af, når du ved, at de svære dage kommer.</p>
+          </div>
+        <div style="background: #F4F2EC; border-radius: 20px; padding: 16px 16px 24px; display: flex; flex-direction: column; gap: 12px">
+            <div style="height: 170px; border-radius: 14px; background: #F7E3EF; display: flex; align-items: center; justify-content: center; overflow: hidden"><div style="flex: none; transform: scale(0.6)">
+              <div role="img" aria-label="Tjek-ind med humør og symptomer" style="width: 286px; background: #FFFFFF; border-radius: 20px; padding: 18px; display: flex; flex-direction: column; gap: 14px; box-shadow: 0 6px 18px rgba(28,31,46,0.08); box-sizing: border-box">
+                <span style="font-size: 12px; font-weight: 700; letter-spacing: 0.6px; text-transform: uppercase; color: #5B6B85">Humør</span>
+                <div style="display: flex; justify-content: space-between">
+                  <span style="width: 44px; height: 44px; border-radius: 22px; background: #C3CEF2; display: flex; align-items: center; justify-content: center"><svg width="24" height="20" viewBox="0 0 24 20" aria-hidden="true"><path d="M6 13 a5 5 0 0 1 .5-10 a7 7 0 0 1 12.5 2 a4 4 0 0 1 -.5 8 Z" fill="#1C1F2E"></path><path d="M9 15 l-2 4 M13 15 l-2 4 M17 15 l-2 4" stroke="#1C1F2E" stroke-width="1.6" stroke-linecap="round"></path></svg></span>
+                  <span style="width: 44px; height: 44px; border-radius: 22px; background: #E4A6C6; display: flex; align-items: center; justify-content: center"><svg width="24" height="18" viewBox="0 0 24 18" aria-hidden="true"><path d="M6 15 a5 5 0 0 1 .5-10 a7 7 0 0 1 12.5 2 a4 4 0 0 1 -.5 8 Z" fill="#1C1F2E"></path></svg></span>
+                  <span style="width: 44px; height: 44px; border-radius: 22px; background: #E8DFCE; display: flex; align-items: center; justify-content: center; box-shadow: 0 0 0 3px #FFFFFF, 0 0 0 5px #1F3FB0; animation: lyPulse 2.6s ease-in-out infinite"><svg width="26" height="22" viewBox="0 0 26 22" aria-hidden="true"><circle cx="17" cy="7" r="4.5" fill="#1C1F2E"></circle><path d="M5 19 a5 5 0 0 1 .5-10 a7 7 0 0 1 12.5 2 a4 4 0 0 1 -.5 8 Z" fill="#1C1F2E"></path></svg></span>
+                  <span style="width: 44px; height: 44px; border-radius: 22px; background: #EEF28A; display: flex; align-items: center; justify-content: center"><svg width="22" height="22" viewBox="0 0 22 22" aria-hidden="true"><circle cx="11" cy="11" r="5" fill="#1C1F2E"></circle></svg></span>
+                  <span style="width: 44px; height: 44px; border-radius: 22px; background: #A8B540; display: flex; align-items: center; justify-content: center"><svg width="24" height="24" viewBox="0 0 24 24" aria-hidden="true"><circle cx="12" cy="12" r="5" fill="#1C1F2E"></circle><path d="M12 1.5v3 M12 19.5v3 M1.5 12h3 M19.5 12h3 M4.5 4.5l2 2 M17.5 17.5l2 2 M4.5 19.5l2-2 M17.5 6.5l2-2" stroke="#1C1F2E" stroke-width="1.8" stroke-linecap="round"></path></svg></span>
+                </div>
+                <span style="font-size: 12px; font-weight: 700; letter-spacing: 0.6px; text-transform: uppercase; color: #5B6B85; margin-top: 4px">Det, du mærker</span>
+                <div style="display: flex; flex-wrap: wrap; gap: 8px">
+                  <span style="display: flex; align-items: center; gap: 6px; padding: 7px 12px; border-radius: 16px; background: #F7E3EF; font-size: 14px; font-weight: 700; animation: lyAppear 6s ease-out 0.3s infinite both">Træthed <span style="display: flex; gap: 3px"><span style="width: 6px; height: 6px; border-radius: 3px; background: #9A3F72"></span><span style="width: 6px; height: 6px; border-radius: 3px; background: #9A3F72"></span><span style="width: 6px; height: 6px; border-radius: 3px; background: #E4A6C6"></span></span></span>
+                  <span style="display: flex; align-items: center; gap: 6px; padding: 7px 12px; border-radius: 16px; background: #F7E3EF; font-size: 14px; font-weight: 700; animation: lyAppear 6s ease-out 0.9s infinite both">Uro <span style="display: flex; gap: 3px"><span style="width: 6px; height: 6px; border-radius: 3px; background: #9A3F72"></span><span style="width: 6px; height: 6px; border-radius: 3px; background: #E4A6C6"></span><span style="width: 6px; height: 6px; border-radius: 3px; background: #E4A6C6"></span></span></span>
+                  <span style="padding: 7px 12px; border-radius: 16px; border: 1.5px solid #E8DFCE; font-size: 14px">Hovedpine</span>
+                </div>
+              </div>
+            </div></div>
+            <h3 style="margin: 4px 8px 0; font-family: Lora, serif; font-size: 22px; font-weight: 600; line-height: 1.25">Tjek ind med dig selv</h3>
+            <p style="margin: 0 8px; font-size: 16px; color: #3A4256">Du vælger selv, hvilke symptomer du vil følge – både fysiske og mentale. Er der nogle, der mangler, så tilføj dem. Tryk flere gange på et symptom for at vise, hvor meget det fylder i dag.</p>
+          </div>
+        <div style="background: #F4F2EC; border-radius: 20px; padding: 16px 16px 24px; display: flex; flex-direction: column; gap: 12px">
+            <div style="height: 170px; border-radius: 14px; background: #EEF0D6; display: flex; align-items: center; justify-content: center; overflow: hidden"><div style="flex: none; transform: scale(0.6)">
+              <div role="img" aria-label="Et mønster af symptomer gennem cyklussen" style="width: 300px; background: #FFFFFF; border-radius: 20px; padding: 16px; display: flex; flex-direction: column; gap: 8px; box-shadow: 0 6px 18px rgba(28,31,46,0.08); box-sizing: border-box">
+                <div style="display: grid; grid-template-columns: 74px repeat(14, minmax(0, 1fr)); gap: 3px; align-items: center">
+                  <span></span>
+                  <span style="height: 8px; border-radius: 3px; background: #C3CEF2"></span><span style="height: 8px; border-radius: 3px; background: #C3CEF2"></span><span style="height: 8px; border-radius: 3px; background: #C3CEF2"></span><span style="height: 8px; border-radius: 3px; background: #C3CEF2"></span><span style="height: 8px; border-radius: 3px; background: #E4A6C6"></span><span style="height: 8px; border-radius: 3px; background: #E4A6C6"></span><span style="height: 8px; border-radius: 3px; background: #E4A6C6"></span><span style="height: 8px; border-radius: 3px; background: #E4A6C6"></span><span style="height: 8px; border-radius: 3px; background: #E4A6C6"></span><span style="height: 8px; border-radius: 3px; background: #E4A6C6"></span><span style="height: 8px; border-radius: 3px; background: #1F3FB0"></span><span style="height: 8px; border-radius: 3px; background: #1F3FB0"></span><span style="height: 8px; border-radius: 3px; background: #1F3FB0"></span><span style="height: 8px; border-radius: 3px; background: #1F3FB0"></span>
+                </div>
+                
+                  <div style="display: grid; grid-template-columns: 74px repeat(14, minmax(0, 1fr)); gap: 3px; align-items: center">
+                    <span style="font-size: 12px; font-weight: 700">Træthed</span>
+                    <span style="height: 14px; border-radius: 3px; background: #F1EEE7"></span><span style="height: 14px; border-radius: 3px; background: #F1EEE7"></span><span style="height: 14px; border-radius: 3px; background: #E4A6C6; animation: lyFill 5s ease-in-out 0.24s infinite both"></span><span style="height: 14px; border-radius: 3px; background: #F1EEE7"></span><span style="height: 14px; border-radius: 3px; background: #E4A6C6; animation: lyFill 5s ease-in-out 0.48s infinite both"></span><span style="height: 14px; border-radius: 3px; background: #C7779F; animation: lyFill 5s ease-in-out 0.60s infinite both"></span><span style="height: 14px; border-radius: 3px; background: #C7779F; animation: lyFill 5s ease-in-out 0.72s infinite both"></span><span style="height: 14px; border-radius: 3px; background: #9A3F72; animation: lyFill 5s ease-in-out 0.84s infinite both"></span><span style="height: 14px; border-radius: 3px; background: #9A3F72; animation: lyFill 5s ease-in-out 0.96s infinite both"></span><span style="height: 14px; border-radius: 3px; background: #C7779F; animation: lyFill 5s ease-in-out 1.08s infinite both"></span><span style="height: 14px; border-radius: 3px; background: #E4A6C6; animation: lyFill 5s ease-in-out 1.20s infinite both"></span><span style="height: 14px; border-radius: 3px; background: #F1EEE7"></span><span style="height: 14px; border-radius: 3px; background: #F1EEE7"></span><span style="height: 14px; border-radius: 3px; background: #F1EEE7"></span>
+                  </div>
+                
+                  <div style="display: grid; grid-template-columns: 74px repeat(14, minmax(0, 1fr)); gap: 3px; align-items: center">
+                    <span style="font-size: 12px; font-weight: 700">Uro</span>
+                    <span style="height: 14px; border-radius: 3px; background: #F1EEE7"></span><span style="height: 14px; border-radius: 3px; background: #F1EEE7"></span><span style="height: 14px; border-radius: 3px; background: #F1EEE7"></span><span style="height: 14px; border-radius: 3px; background: #F1EEE7"></span><span style="height: 14px; border-radius: 3px; background: #E4A6C6; animation: lyFill 5s ease-in-out 0.48s infinite both"></span><span style="height: 14px; border-radius: 3px; background: #E4A6C6; animation: lyFill 5s ease-in-out 0.60s infinite both"></span><span style="height: 14px; border-radius: 3px; background: #C7779F; animation: lyFill 5s ease-in-out 0.72s infinite both"></span><span style="height: 14px; border-radius: 3px; background: #C7779F; animation: lyFill 5s ease-in-out 0.84s infinite both"></span><span style="height: 14px; border-radius: 3px; background: #9A3F72; animation: lyFill 5s ease-in-out 0.96s infinite both"></span><span style="height: 14px; border-radius: 3px; background: #E4A6C6; animation: lyFill 5s ease-in-out 1.08s infinite both"></span><span style="height: 14px; border-radius: 3px; background: #F1EEE7"></span><span style="height: 14px; border-radius: 3px; background: #F1EEE7"></span><span style="height: 14px; border-radius: 3px; background: #F1EEE7"></span><span style="height: 14px; border-radius: 3px; background: #F1EEE7"></span>
+                  </div>
+                
+                  <div style="display: grid; grid-template-columns: 74px repeat(14, minmax(0, 1fr)); gap: 3px; align-items: center">
+                    <span style="font-size: 12px; font-weight: 700">Hovedpine</span>
+                    <span style="height: 14px; border-radius: 3px; background: #F1EEE7"></span><span style="height: 14px; border-radius: 3px; background: #F1EEE7"></span><span style="height: 14px; border-radius: 3px; background: #F1EEE7"></span><span style="height: 14px; border-radius: 3px; background: #F1EEE7"></span><span style="height: 14px; border-radius: 3px; background: #F1EEE7"></span><span style="height: 14px; border-radius: 3px; background: #F1EEE7"></span><span style="height: 14px; border-radius: 3px; background: #F1EEE7"></span><span style="height: 14px; border-radius: 3px; background: #E4A6C6; animation: lyFill 5s ease-in-out 0.84s infinite both"></span><span style="height: 14px; border-radius: 3px; background: #F1EEE7"></span><span style="height: 14px; border-radius: 3px; background: #E4A6C6; animation: lyFill 5s ease-in-out 1.08s infinite both"></span><span style="height: 14px; border-radius: 3px; background: #C7779F; animation: lyFill 5s ease-in-out 1.20s infinite both"></span><span style="height: 14px; border-radius: 3px; background: #E4A6C6; animation: lyFill 5s ease-in-out 1.32s infinite both"></span><span style="height: 14px; border-radius: 3px; background: #F1EEE7"></span><span style="height: 14px; border-radius: 3px; background: #F1EEE7"></span>
+                  </div>
+                
+                <div style="margin-top: 6px; padding: 10px 12px; border-radius: 14px; background: #F4F2EC; font-size: 13px; line-height: 1.4">I disse dage plejer du at melde <b>træthed</b> og <b>uro</b>.</div>
+              </div>
+            </div></div>
+            <h3 style="margin: 4px 8px 0; font-family: Lora, serif; font-size: 22px; font-weight: 600; line-height: 1.25">Forstå dine symptomer</h3>
+            <p style="margin: 0 8px; font-size: 16px; color: #3A4256">Jo flere dage du tjekker ind, jo tydeligere bliver det, hvad der går igen. Fx: “I disse dage plejer du at melde træthed og uro.”</p>
+          </div>
+        <div style="background: #F4F2EC; border-radius: 20px; padding: 16px 16px 24px; display: flex; flex-direction: column; gap: 12px">
+            <div style="height: 170px; border-radius: 14px; background: #1F3FB0; display: flex; align-items: center; justify-content: center; overflow: hidden"><div style="flex: none; transform: scale(0.66)">
+              <svg width="270" height="230" viewBox="0 0 270 230" role="img" aria-label="Hulen med lys i døråbningen">
+                <circle cx="135" cy="150" r="54" fill="#EEF28A" style="animation: lyGlow 3.5s ease-in-out infinite"></circle>
+                <g transform="translate(55 60) scale(2)"><path fill="#F4F2EC" d="M0 54 C0 20 18 0 40 0 C62 0 80 20 80 54 C80 58 78 60 74 60 L52 60 L52 50 A12 12 0 0 0 28 50 L28 60 L6 60 C2 60 0 58 0 54 Z"></path></g>
+                <path d="M135 170 c-6 -6 -14 -11 -14 -18 a7 7 0 0 1 14 -3 a7 7 0 0 1 14 3 c0 7 -8 12 -14 18 Z" fill="#EEF28A" style="transform-box: fill-box; transform-origin: center; animation: lyBreathe 1.8s ease-in-out infinite"></path>
+                <circle cx="34" cy="70" r="14" fill="#E4A6C6" style="animation: lyFloat 4s ease-in-out infinite"></circle>
+                <circle cx="238" cy="58" r="11" fill="#C3CEF2" style="animation: lyFloat 5s ease-in-out 0.8s infinite"></circle>
+                <circle cx="236" cy="168" r="13" fill="#A8B540" style="animation: lyFloat 4.5s ease-in-out 1.6s infinite"></circle>
+              </svg>
+            </div></div>
+            <h3 style="margin: 4px 8px 0; font-family: Lora, serif; font-size: 22px; font-weight: 600; line-height: 1.25">Når det stormer</h3>
+            <p style="margin: 0 8px; font-size: 16px; color: #3A4256">På de svære dage er der hjælp at hente. Øvelser til at finde forbindelse, din egen værktøjskasse med sætninger eller ord, der hjælper dig, og mulighed for at række ud.</p>
+          </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Dine nære -->
+  <section id="naere" style="background: #1F3FB0; color: #FFFFFF; padding: 80px 24px">
+    <div style="max-width: 1120px; margin: 0 auto; display: flex; flex-wrap: wrap; gap: 48px; align-items: center">
+      <div style="flex: 999 1 420px; min-width: 0; display: flex; flex-direction: column; gap: 16px">
+        <span style="font-size: 13px; font-weight: 800; letter-spacing: 0.8px; text-transform: uppercase; color: #EEF28A">Dine nære</span>
+        <h2 style="margin: 0; font-family: Lora, serif; font-size: clamp(30px, 3.6vw, 42px); font-weight: 600; line-height: 1.15">Du er ikke alene i uvejret</h2>
+        <p style="margin: 0; font-size: 18px; font-weight: 400">Ly er også lavet til at kunne tale sammen. Dine nære bliver meget klogere på, hvad du oplever gennem din cyklus, og hvornår du kan have det særligt svært og måske har brug for lidt ekstra støtte. Se det som et anker for jer begge under stormen.</p>
+        <ul style="margin: 0; padding-left: 20px; display: flex; flex-direction: column; gap: 6px; font-size: 17px">
+          <li>De ser din fase og får korte råd til, hvad der kan hjælpe</li>
+          <li>De får en blid påmindelse op til dine svære dage</li>
+          <li>Du rækker ud med et tryk – og de kan svare med et tryk</li>
+        </ul>
+        <p style="margin: 0; font-size: 16px; opacity: 0.9">Du bestemmer selv, hvad hver af dem ser, og du kan altid stoppe delingen igen. Det er gratis for dine nære.</p>
+      </div>
+      <div style="flex: 1 1 300px; display: flex; flex-direction: column; gap: 12px; max-width: 380px">
+        <span style="align-self: flex-start; background: #FFFFFF; color: #1C1F2E; border-radius: 20px 20px 20px 6px; padding: 12px 16px; font-size: 16px; animation: lyStep1 8s ease-out infinite both"><b style="color: #9A3F72; font-size: 13px; display: block">Sara</b>Jeg har brug for ro i dag</span>
+        <span style="align-self: flex-end; display: flex; flex-direction: column; align-items: flex-end; gap: 6px; animation: lyStep2 8s ease-out infinite both">
+          <span style="font-size: 13px; font-weight: 700; opacity: 0.85">Svar med et tryk – eller skriv selv</span>
+          <span style="display: flex; gap: 8px; flex-wrap: wrap; justify-content: flex-end">
+            <span style="padding: 7px 12px; border-radius: 16px; border: 1.5px solid #FFFFFF; font-size: 14px; font-weight: 700">Tænker på dig</span>
+            <span style="padding: 7px 12px; border-radius: 16px; border: 1.5px solid #FFFFFF; font-size: 14px; font-weight: 700">Jeg er her, når du vil snakke</span>
+          </span>
+        </span>
+        <span style="align-self: flex-end; background: #EEF28A; color: #1C1F2E; border-radius: 20px 20px 6px 20px; padding: 12px 16px; font-size: 16px; font-weight: 700; animation: lyStep3 8s ease-out infinite both">Jeg er her, når du vil snakke</span>
+      </div>
+    </div>
+  </section>
+
+  <!-- Privatliv -->
+  <section id="privatliv" style="padding: 80px 24px">
+    <div style="max-width: 1120px; margin: 0 auto; display: flex; flex-wrap: wrap; gap: 40px">
+      <div style="flex: 1 1 320px; display: flex; flex-direction: column; gap: 12px">
+        <span style="font-size: 13px; font-weight: 800; letter-spacing: 0.8px; text-transform: uppercase; color: #1F3FB0">Privatliv</span>
+        <h2 style="margin: 0; font-family: Lora, serif; font-size: clamp(30px, 3.6vw, 42px); font-weight: 600; line-height: 1.15">Dine data er dine</h2>
+        <p style="margin: 0; color: #3A4256">Det, du fortæller Ly, er helbredsoplysninger. Derfor er Ly bygget, så de bliver hos dig.</p>
+        <a href="privatlivspolitik.html" style="font-weight: 700">Læs privatlivspolitikken</a>
+      </div>
+      <ul style="flex: 2 1 460px; margin: 0; padding: 0; list-style: none; display: grid; grid-template-columns: repeat(auto-fit, minmax(220px, 1fr)); gap: 16px">
+        
+          <li style="background: #FFFFFF; border-radius: 20px; padding: 20px; font-size: 16px">Alt bliver på din telefon. Der er ingen tilknyttet konto, og vi kan ikke se dine data.</li>
+        
+          <li style="background: #FFFFFF; border-radius: 20px; padding: 20px; font-size: 16px">Du bestemmer, hvad dine nære ser – og kan altid stoppe delingen igen.</li>
+        
+          <li style="background: #FFFFFF; border-radius: 20px; padding: 20px; font-size: 16px">Ingen reklamer og ingen sporing. Ly lever af Ly Plus – ikke af reklamer.</li>
+        
+          <li style="background: #FFFFFF; border-radius: 20px; padding: 20px; font-size: 16px">Du kan altid gemme en kopi af dine data eller slette det hele.</li>
+        
+      </ul>
+    </div>
+  </section>
+
+  <!-- Ly Plus -->
+  <section id="plus" style="background: #FFFFFF; padding: 80px 24px">
+    <div style="max-width: 1120px; margin: 0 auto; display: flex; flex-direction: column; gap: 32px">
+      <div style="max-width: 640px; display: flex; flex-direction: column; gap: 10px">
+        <span style="font-size: 13px; font-weight: 800; letter-spacing: 0.8px; text-transform: uppercase; color: #1F3FB0">Pris</span>
+        <h2 style="margin: 0; font-family: Lora, serif; font-size: clamp(30px, 3.6vw, 42px); font-weight: 600; line-height: 1.15">Gratis at bruge – Ly Plus, når du vil mere</h2>
+        <p style="margin: 0; color: #3A4256">Alt, du har brug for i hverdagen og på de svære dage, er gratis. Ly Plus giver dig overblikket over tid.</p>
+      </div>
+      <div style="display: grid; grid-template-columns: repeat(auto-fit, minmax(280px, 1fr)); gap: 20px">
+        <div style="background: #F4F2EC; border-radius: 20px; padding: 28px; display: flex; flex-direction: column; gap: 12px">
+          <h3 style="margin: 0; font-family: Lora, serif; font-size: 24px; font-weight: 600; color: #1F3FB0">Ly</h3>
+          <span style="font-size: 20px; font-weight: 800; color: #1F3FB0">Gratis</span>
+          <ul style="margin: 0; padding-left: 20px; display: flex; flex-direction: column; gap: 6px; font-size: 16px">
+            <li>Tjek-ind: humør, energi, blødning og symptomer</li>
+            <li>Kalender med faser og pilledage</li>
+            <li>Mønstre for dine 2 seneste cyklusser</li>
+            <li>Værktøjer til svære dage og krisehjælp</li>
+            <li>1 nær, der kan se din fase</li>
+          </ul>
+        </div>
+        <div style="background: #1F3FB0; color: #FFFFFF; border-radius: 20px; padding: 28px; display: flex; flex-direction: column; gap: 12px">
+          <span style="display: flex; align-items: center; gap: 10px"><h3 style="margin: 0; font-family: Lora, serif; font-size: 24px; font-weight: 600">Ly Plus</h3><span style="font-size: 11px; font-weight: 800; letter-spacing: 0.5px; background: #EEF28A; color: #1C1F2E; border-radius: 10px; padding: 3px 8px">PLUS</span></span>
+          <span style="font-size: 20px; font-weight: 800">199 kr. om året <span style="font-size: 15px; font-weight: 600; opacity: 0.85">eller 39 kr. om måneden · 7 dage gratis</span></span>
+          <ul style="margin: 0; padding-left: 20px; display: flex; flex-direction: column; gap: 6px; font-size: 16px">
+            <li>Indsigter på tværs af dine cyklusser</li>
+            <li>Alle dine tidligere cyklusser i Mønstre</li>
+            <li>Aftaler i Kalender – se, hvilken fase de falder i</li>
+            <li>"Plejer"-noter på I dag og i Kalender</li>
+            <li>Rapporter, du kan læse i ro og mag – fx sammen med en sundhedsfaglig</li>
+            <li>Op til 3 nære, der kan se mere – og ræk ud til dem</li>
+          </ul>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Afslutning -->
+  <section style="padding: 80px 24px; text-align: center">
+    <div style="max-width: 720px; margin: 0 auto; display: flex; flex-direction: column; gap: 18px; align-items: center">
+      <span style="font-family: 'Bagel Fat One', sans-serif; font-size: 72px; line-height: 1; color: #1F3FB0">Ly</span>
+      <h2 style="margin: 0; font-family: Lora, serif; font-size: 30px; font-weight: 600">Kend din cyklus – og dig selv</h2>
+      <p style="margin: 0; font-size: 18px; color: #3A4256">Ly følger dit humør, din energi og dine symptomer – både fysiske og mentale – gennem hele cyklussen. Med tiden lærer Ly, hvornår de svære dage plejer at komme, så du kan planlægge efter dem og lade dine nære forstå, hvad du går igennem. Og når det stormer, er der værktøjer og støtte lige ved hånden.</p>
+      <p style="margin: 0; font-size: 18px; font-weight: 700">Begynd i dag – det er gratis.</p>
+      <a href="#" style="display: inline-flex; align-items: center; min-height: 52px; padding: 0 26px; border-radius: 26px; background: #1F3FB0; color: #FFFFFF; font-size: 17px; font-weight: 700; text-decoration: none">Hent Ly i App Store</a>
+      <p style="margin: 0; font-size: 14px; color: #5B6B85">Ly er en trivselsledsager – ikke medicinsk udstyr – og stiller ikke diagnoser.</p>
+    </div>
+  </section>
+
+  <!-- Bund -->
+  <footer style="border-top: 1px solid rgba(28,31,46,0.1); padding: 28px 24px 40px">
+    <div style="max-width: 1120px; margin: 0 auto; display: flex; flex-wrap: wrap; gap: 12px 28px; align-items: center; font-size: 15px">
+      <svg width="36" height="27" viewBox="0 0 80 60" role="img" aria-label="Ly"><path fill="#1F3FB0" d="M0 54 C0 20 18 0 40 0 C62 0 80 20 80 54 C80 58 78 60 74 60 L52 60 L52 50 A12 12 0 0 0 28 50 L28 60 L6 60 C2 60 0 58 0 54 Z"></path></svg>
+      <a href="privatlivspolitik.html">Privatlivspolitik</a>
+      <a href="vilkaar.html">Brugsbetingelser</a>
+      <a href="support.html">Support</a>
+      <a href="mailto:support@ly-app.info">support@ly-app.info</a>
+      <span style="flex: 1"></span>
+      <span style="color: #5B6B85">© 2026 IV Technologies Ltd</span>
+    </div>
+  </footer>
+</div>
+</body>
+</html>
