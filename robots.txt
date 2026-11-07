@@ -1,3 +1,2 @@
-# Kladde: hele siden er skjult for søgemaskiner, indtil Ly er i App Store.
 User-agent: *
-Disallow: /
+Allow: /
